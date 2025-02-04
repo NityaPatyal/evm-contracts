@@ -1,0 +1,24 @@
+{
+  "name": "voting-system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx hardhat test",
+    "lint": "solhint 'contracts/**/*.sol'",
+    "dev": "npm i && npx hardhat test && npm run lint && npx hardhat compile",
+    "audit": "slither",
+    "pre-commit": "npm i && npm run audit && npm run dev && npx hardhat docgen",
+    "deploy:localhost": "npx hardhat ignition deploy ignition/modules/DeployVotingSystem.js --network localhost --reset"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.11",
+    "@openzeppelin/contracts": "^4.8.3",
+    "hardhat": "^2.22.18",
+    "solidity-docgen": "^0.6.0-beta.36"
+  }
+}
