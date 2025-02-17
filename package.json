@@ -9,7 +9,8 @@
     "dev": "npm i && npx hardhat test && npm run lint && npx hardhat compile",
     "audit": "slither",
     "pre-commit": "npm i && npm run audit && npm run dev && npx hardhat docgen",
-    "deploy:localhost": "npx hardhat ignition deploy ignition/modules/DeployVotingSystem.js --network localhost --reset"
+    "deploy:voting": "npx hardhat ignition deploy ignition/modules/VotingSystem.js --network localhost --reset",
+    "deploy:timelock": "npx hardhat ignition deploy ignition/modules/TimeLockedContract.js --network localhost --reset"
   },
   "keywords": [],
   "author": "",
